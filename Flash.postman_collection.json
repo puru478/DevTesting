@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "d853e847-93a6-4747-b97e-7a6a3afb2f26",
+		"name": "Flash",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/playzelo/api/cities",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"playzelo",
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Centers Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/playzelo/centers/cities",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"playzelo",
+						"centers",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purge Cache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"redis_key\": \"playzelo:/api/v2/app/config?product=ios\"\n}"
+				},
+				"url": {
+					"raw": "{{api_url}}/flash/actions/purge",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"flash",
+						"actions",
+						"purge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Zolo Employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_url}}/flash/playzelo/crm/allZoloEmployees",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"flash",
+						"playzelo",
+						"crm",
+						"allZoloEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get House Keeping details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_url}}/flash/playzelo/api/v1/tenant/5cb1a59566a2f65455b9aeb6/housekeepings?platform=android&X-Source=CUSTOMER_ANDROID_APP&app_version_name=3.1.1&app_version_code=311&app_name=CUSTOMER_ANDROID_APP",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"flash",
+						"playzelo",
+						"api",
+						"v1",
+						"tenant",
+						"5cb1a59566a2f65455b9aeb6",
+						"housekeepings"
+					],
+					"query": [
+						{
+							"key": "platform",
+							"value": "android"
+						},
+						{
+							"key": "X-Source",
+							"value": "CUSTOMER_ANDROID_APP"
+						},
+						{
+							"key": "app_version_name",
+							"value": "3.1.1"
+						},
+						{
+							"key": "app_version_code",
+							"value": "311"
+						},
+						{
+							"key": "app_name",
+							"value": "CUSTOMER_ANDROID_APP"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

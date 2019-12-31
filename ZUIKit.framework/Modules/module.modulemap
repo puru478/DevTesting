@@ -1,0 +1,11 @@
+framework module ZUIKit {
+  umbrella header "ZUIKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ZUIKit.Swift {
+    header "ZUIKit-Swift.h"
+    requires objc
+}
